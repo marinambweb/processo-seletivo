@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Processo Seletivo</title>
+    <!--arquivo css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Área de Cadastro</h1>
+    </header>
+
+    <!--campo do formulário-->
+    <section>
+        <form action="cad.php" method="get">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="idnome">
+
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="idemail">
+
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="idsenha">
+
+            <!--botão-->
+            <input type="submit" onclick="funcaoSubmit()" value="Enviar">
+        </form>
+    </section>
+    
+    <!--função ref ao botão submit, ref. ação ao clicar-->
+    <script>
+        function funcaoSubmit()
+        {
+            var inputNome = document.getElementById("idnome").value;
+            var inputEmail = document.getElementById("idemail").value;
+
+            alert("Confirmar dados: " + inputNome + " , " + inputEmail);
+        }
+    </script>
+</body>
+</html>
